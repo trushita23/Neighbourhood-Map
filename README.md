@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 * Download or clone the repository in your computer:
 ```
-$ git clone https://github.com/trushita/Neighborhood-Map.git
+$ git clone https://github.com/trushita23/Neighborhood-Map.git
 ```
 * Go to the project directory and install the dependencies:
 `npm install axios --save`
