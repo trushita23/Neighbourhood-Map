@@ -1,0 +1,204 @@
+.App {}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: pink;
+  height: 50px;
+  display: block;
+  color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+}
+
+.App-header h1 {
+  margin-top: 0;
+  margin-left: 210px;
+  /* display: inline-block; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  display: none;
+}
+
+.cross {
+  display: none;
+}
+
+
+
+/*  side navigation container */
+
+#sideMenuContainer {
+  background: #f1f1f1;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+  /* margin: 0;
+    padding: 0; */
+}
+
+#sideMenuContainer.show {
+  left:0px;
+}
+
+
+/* The side navigation menu */
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+}
+
+/* sidebar search */
+.sideMenuContainer {
+  top:0px;
+}
+
+#sideMenuContainer input[type=text] {
+  padding-right: .5em;
+  margin-left: .5em;
+  margin-top: 1.5em;
+  border-radius: .5em;
+  box-shadow: 0px 1px 6px 0px #0000009e;
+  box-sizing: border-box;
+}
+
+/* Sidebar links */
+
+.sidebar li {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+
+.sidebar li.active {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Links on mouse-over */
+
+.sidebar li:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+
+div.content {
+  width: 100%;
+}
+
+.infoWindowText h1 {
+  font-size: 1.5em;
+}
+.infoWindowText h2 {
+  font-size: 1em;
+}
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+
+@media screen and (max-width: 700px) {
+  .App-header h1 {
+    font-size: 1.5em;
+    margin-left: 100px;
+    /* display: inline-block; */
+  }
+  #sideMenuContainer {
+    background: #f1f1f1;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    /* margin: 0;
+      padding: 0; */
+  }
+  .icon {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 2.5em;
+    cursor: pointer;
+    margin-top: .1em;
+    box-sizing: border-box;
+    transition: all 0.4s ease-out;
+  }
+
+  .icon .hide {
+    left:-200px;
+  }
+
+  .cross {
+    display: block;
+    width: 1em;
+    float: right;
+    padding-right: .3em;
+    padding-left: .3em;
+    margin-top: .1em;
+    cursor: pointer;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+
+@media screen and (max-width: 500px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .App-header
+  {
+    height: 35px;
+  }
+  .App-header h1 {
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 2em;
+    margin-top: 0;
+  }
+
+
+}
